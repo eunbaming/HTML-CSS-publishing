@@ -1,0 +1,53 @@
+/* keyframes, animation, nth-child, flex, position, calc */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.loading {
+  /* border: 1px solid red; */
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+.loading span {
+  background-color: crimson;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  animation: loading 1.5s infinite;
+}
+.loading span:nth-child(1) {
+}
+.loading span:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+/* 애니메이션에서는 transition에서 -> left로 지정했으면 그 뒤에것도 left로 */
+@keyframes loading {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 0;
+    left: calc(100% - 10px);
+    background-color: yellowgreen;
+  }
+  50% {
+    top: calc(100% - 10px);
+    left: calc(100% - 10px);
+    background-color: violet;
+  }
+  75% {
+    top: calc(100% - 10px);
+    left: 0;
+    background-color: dodgerblue;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
