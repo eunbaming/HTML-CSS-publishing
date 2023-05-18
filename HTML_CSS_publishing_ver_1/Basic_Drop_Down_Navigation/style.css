@@ -1,0 +1,39 @@
+/* hover, display */
+
+body {
+  color: #222;
+}
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+.dropdown {
+  width: 200px;
+}
+.dropdown-btn {
+  width: 200px;
+  padding: 12px;
+  background-color: violet;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+.dropdown-submenu {
+  display: none;
+  box-shadow: 0 0 10px rgb(147, 147, 147);
+  width: inherit;
+}
+.dropdown-submenu a {
+  display: block;
+  padding: 8px;
+  text-align: center;
+}
+.dropdown-submenu a:hover {
+  background-color: #eee;
+}
+.dropdown:hover .dropdown-submenu {
+  display: block;
+}
+
+/* hover 시 수행하는 것은 자신 또는 자신의 자식요소만 가능하다. */
