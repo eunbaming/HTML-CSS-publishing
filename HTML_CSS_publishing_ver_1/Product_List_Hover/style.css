@@ -1,0 +1,42 @@
+/* hover, display, position, opacity */
+/* display:none은 transition 속성을 사용할 수 없다. */
+
+.items {
+}
+.item {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  border: 1px solid #eee;
+  position: relative;
+  margin: 10px;
+}
+.caption {
+  width: inherit;
+  height: inherit;
+  background-color: #00000076;
+  color: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  padding-top: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+.caption a {
+  color: #fff;
+  text-decoration: none;
+  background-color: teal;
+  padding: 5px;
+  border-radius: 3px;
+}
+.caption a:hover {
+  background-color: #fff;
+  color: #000;
+}
+.item:hover .caption {
+  opacity: 1;
+}
