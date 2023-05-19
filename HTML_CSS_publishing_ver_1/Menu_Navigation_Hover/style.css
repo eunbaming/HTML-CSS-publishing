@@ -31,7 +31,7 @@ body {
 .gnb a::before {
   content: "\f105";
   font-family: fontawesome;
-  margin-right: 10px;
+  margin-right: 12px;
   opacity: 0;
   transition: 0.5s;
 }
