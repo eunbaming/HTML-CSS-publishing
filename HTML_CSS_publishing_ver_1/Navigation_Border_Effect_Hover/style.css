@@ -1,2 +1,47 @@
-/* before, after */
+/* flex, before, after, hover, fontawesome, transition, position */
 /* 인라인 요소는 상하 값을 가질 수 없다. */
+/* 각각 요소들이 일정한 간격을 가지고 있을 때 ul 계층구조로 설계하는 것이 좋다. */
+
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.gnb {
+  list-style: none;
+  width: 600px;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #0000001f;
+  padding: 50px 30px;
+  display: flex;
+}
+.gnb li {
+  flex: 1;
+  text-align: center;
+  box-sizing: border-box;
+}
+.gnb li a {
+  text-decoration: none;
+  color: #222;
+  position: relative;
+}
+.gnb li a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: aqua;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+.gnb li a:hover::before {
+  width: 100%;
+}
