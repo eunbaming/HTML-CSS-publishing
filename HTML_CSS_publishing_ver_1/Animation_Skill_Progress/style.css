@@ -1,4 +1,6 @@
 /* float, gradient, keyframe animation, first-child, last-child, 인라인 스타일 사용 */
+/* delayy: keyframes, animation, nth-child, nth-of-type, flex, position */
+
 body {
   display: flex;
   justify-content: center;
@@ -42,6 +44,27 @@ body {
   background: linear-gradient(to right, violet, yellow);
   animation-name: ani;
   animation-duration: 1s;
+  animation-fill-mode: both; /* animation-fill-mode : animation이 100% 구간까지 갔을 때 0%로 돌아가는 것이 아닌 100%에 머물도록 하는 것 */
+}
+
+/* nth-child()는 부모 요소의 n번째 자식 요소를 의미하는 것으로,
+ 태그종류와 상관없이 출연 순서로 순서가 정해진다. */
+/* nth-of-type()은 부모 요소의 자식 중 type 조건을 만족하는 n번째 자식 요소를 의미하는 것으로,
+태그를 주시하며 그 출연 순서로 순서가 정해진다. */
+.progress-skill .item:nth-of-type(1) .progress-level {
+  animation-delay: 0s;
+}
+.progress-skill .item:nth-of-type(2) .progress-level {
+  animation-delay: 0.2s;
+}
+.progress-skill .item:nth-of-type(3) .progress-level {
+  animation-delay: 0.4s;
+}
+.progress-skill .item:nth-of-type(4) .progress-level {
+  animation-delay: 0.6s;
+}
+.progress-skill .item:nth-of-type(5) .progress-level {
+  animation-delay: 0.8s;
 }
 
 @keyframes ani {
