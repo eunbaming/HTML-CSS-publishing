@@ -1,0 +1,48 @@
+/* input, label, 인접선택자, 형제선택자, 속성선택자 :checked, opacity, transform, nth-child, position */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+input[id="trigger"] {
+  display: none;
+}
+label[for="trigger"] {
+  /* border: 1px solid red; */
+  width: 40px;
+  height: 30px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+label[for="trigger"] span {
+  position: absolute;
+  height: 2px;
+  background-color: #000;
+  width: 100%;
+  transition: 0.3s;
+}
+label[for="trigger"] span:nth-child(1) {
+  top: 0;
+}
+label[for="trigger"] span:nth-child(2) {
+  top: 50%;
+}
+label[for="trigger"] span:nth-child(3) {
+  top: 100%;
+}
+
+input[id="trigger"]:checked + label[for="trigger"] span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+input[id="trigger"]:checked + label[for="trigger"] span:nth-child(2) {
+  opacity: 0;
+}
+input[id="trigger"]:checked + label[for="trigger"] span:nth-child(3) {
+  top: 50%;
+  transform: rotate(-45deg);
+}
