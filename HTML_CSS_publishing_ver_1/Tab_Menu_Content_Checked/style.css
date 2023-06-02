@@ -17,7 +17,13 @@ input[name="tabmenu"] {
   display: none;
 }
 .content {
-  display: none;
+  /* display: none; */ /* 기본형 */
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  visibility: hidden; /* opacity는 보이지만 않고 그자리에 남아있기 때문에 숨겨준다. */
 }
 .btn {
   position: absolute;
@@ -38,7 +44,9 @@ input[name="tabmenu"] {
 input[id="tab1"]:checked ~ .slide1,
 input[id="tab2"]:checked ~ .slide2,
 input[id="tab3"]:checked ~ .slide3 {
-  display: block;
+  /* display: block; */ /* 기본형 */
+  opacity: 1;
+  visibility: visible;
 }
 input[id="tab1"]:checked ~ .btn label[for="tab1"],
 input[id="tab2"]:checked ~ .btn label[for="tab2"],
