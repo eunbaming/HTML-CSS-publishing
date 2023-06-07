@@ -1,0 +1,62 @@
+/* input, label, 인접선택자, 형제선택자, 속성선택자 :checked, overflow, nth-child, position */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.tab-inner {
+  /* border: 1px solid red; */
+  width: 300px;
+  height: 350px;
+}
+input[name="tabmenu"] {
+  display: none;
+}
+.slide {
+  position: relative;
+  font-size: 0; /* 이미지는 마진이 생기기 때문에 부모에 font-size : 0;로 없애준다. */
+  width: 300px;
+  height: 300px; /* 자식에 posision: absolute, float속성이 있으면 부모의 높이값이 잃어버리기 때문에 높이값을 줘야한다.*/
+  overflow: hidden;
+}
+.slide-inner {
+  /* border: 1px solid blue; */
+  width: 900px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+.button {
+  /* border: 1px solid blue; */
+  margin-top: 10px;
+  text-align: center;
+}
+.button label {
+  /* border: 1px solid green; */
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: lightblue;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[id="tab1"]:checked ~ .slide .slide-inner {
+  left: 0;
+}
+input[id="tab2"]:checked ~ .slide .slide-inner {
+  left: -300px;
+}
+input[id="tab3"]:checked ~ .slide .slide-inner {
+  left: -600px;
+}
+
+input[id="tab1"]:checked ~ .button label[for="tab1"],
+input[id="tab2"]:checked ~ .button label[for="tab2"],
+input[id="tab3"]:checked ~ .button label[for="tab3"] {
+  background-color: aqua;
+}
