@@ -1,0 +1,59 @@
+/* input, label, 인접선택자, 속성선택자, :checked 가상클래스 */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.custom {
+  margin: 20px;
+}
+.custom input[type="checkbox"] {
+  display: none;
+}
+.custom label {
+}
+.custom label em {
+  /* border: 1px solid red; */
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle; /* 인라인 요소끼리 수직중앙 정렬을 맞출 때 사용 : vertical-align : middle */
+  margin-right: 5px;
+  background: url(images/checkbox-01.png) no-repeat;
+  background-position: left center;
+}
+.custom input[type="checkbox"]:checked ~ label em {
+  background-position: right center;
+}
+
+.grade input[type="radio"] {
+  display: none;
+}
+.grade label {
+  margin: 5px;
+}
+.grade label em {
+  /* border: 1px solid blue; */
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  background: url(images/radio-01.png) no-repeat;
+  background-position: left center;
+  margin-right: 3px;
+}
+.grade input[id="grade-chk1"]:checked ~ label[for="grade-chk1"] em,
+.grade input[id="grade-chk2"]:checked ~ label[for="grade-chk2"] em,
+.grade input[id="grade-chk3"]:checked ~ label[for="grade-chk3"] em,
+.grade input[id="grade-chk4"]:checked ~ label[for="grade-chk4"] em {
+  background-position: right center;
+}
+.grade input[id="grade-chk1"]:checked ~ label[for="grade-chk1"],
+.grade input[id="grade-chk2"]:checked ~ label[for="grade-chk2"],
+.grade input[id="grade-chk3"]:checked ~ label[for="grade-chk3"],
+.grade input[id="grade-chk4"]:checked ~ label[for="grade-chk4"] {
+  color: crimson;
+}
