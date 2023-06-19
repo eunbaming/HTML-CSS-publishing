@@ -1,0 +1,70 @@
+/* flex, hover, nth-child, box-shadow, gradient */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card {
+  margin: 10px;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  padding: 20px;
+  padding-top: 170px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #fff;
+  transition: 0.5s;
+}
+.content h2 {
+  font-size: 25px;
+}
+.content h2 span {
+  display: block;
+  font-size: 14px;
+  color: gold;
+  margin-bottom: 20px;
+}
+.sns {
+  margin-top: 20px;
+}
+.sns a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 13px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.card:hover .content {
+  top: 0;
+}
+.card:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 10px 20px #0000002b; /* offset-x | offset-y | blur-radius | color */
+}
+.card:nth-child(1) .content {
+  background: linear-gradient(to top, crimson, transparent);
+}
+.card:nth-child(2) .content {
+  background: linear-gradient(to top, royalblue, transparent);
+}
+.card:nth-child(3) .content {
+  background: linear-gradient(to top, yellowgreen, transparent);
+}

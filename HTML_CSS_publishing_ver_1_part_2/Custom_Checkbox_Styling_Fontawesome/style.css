@@ -1,0 +1,42 @@
+/* input, label, 인접선택자, 속성선택자, 가상클래스 :checked :active ::before */
+/* input요소와 이미지에는 before를 사용할 수 없는데 label에서는 사용이 가능하다. */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form input[type="checkbox"] {
+  display: none;
+}
+form label {
+  display: block;
+  margin: 10px;
+}
+form label::before {
+  content: "\f00c";
+  font-family: fontawesome;
+  margin-right: 5px;
+  border: 1px solid #333;
+  border-radius: 3px;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  font-size: 13px;
+  text-align: center;
+  line-height: 14px;
+  vertical-align: middle;
+  color: transparent;
+  transition: 0.2s;
+}
+
+form input[type="checkbox"]:checked + label::before {
+  background-color: crimson;
+  color: #fff;
+  border-color: transparent;
+}
+/* active : 마우스를 클릭하고 안떼어낸 상태 */
+form input[type="checkbox"] + label:active::before {
+  transform: scale(0);
+}
