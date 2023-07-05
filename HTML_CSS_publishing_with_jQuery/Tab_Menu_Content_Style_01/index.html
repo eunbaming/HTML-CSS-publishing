@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="testimonial-section">
+      <h1><span>CodingWorks</span> Publishing Online Class with Inflearn</h1>
+      <div class="testimonial-pic">
+        <img
+          class="active"
+          src="images/face-01.jpg"
+          alt="face-01"
+          data-alt="tab1"
+        />
+        <img src="images/face-02.jpg" alt="face-02" data-alt="tab2" />
+        <img src="images/face-03.jpg" alt="face-03" data-alt="tab3" />
+        <img src="images/face-04.jpg" alt="face-04" data-alt="tab4" />
+      </div>
+      <div class="testimonial">
+        <div class="content active" id="tab1">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste
+            voluptatibus totam fugit impedit ad eius consectetur omnis!
+            Voluptate enim minima illum quasi rem ut architecto facere
+            praesentium eveniet laborum iure a necessitatibus ipsum, placeat
+            impedit incidunt similique perspiciatis quod est quo sunt esse
+            omnis? Quo nesciunt voluptatem ut ducimus accusamus inventore vero
+            dicta sed sunt? Voluptate eum, voluptates vel tempora dolorum
+            blanditiis cupiditate quae et sunt iure tenetur. Fugiat porro ut
+            illo voluptatibus cum? Animi optio in qui id quaerat.
+          </p>
+          <p>Sally, Web Desginer</p>
+        </div>
+        <div class="content" id="tab2">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+            dolorem obcaecati ipsum quam aperiam! Magnam repellat labore natus
+            illo temporibus quisquam adipisci laborum similique accusantium,
+            possimus sit, doloribus tempore commodi eum vitae est voluptatibus
+            perferendis pariatur tenetur necessitatibus quaerat vel sed ex quae.
+            Pariatur voluptatibus explicabo dolorem voluptas unde ipsum,
+            quibusdam ullam illo consequuntur nam perspiciatis laudantium
+            eveniet voluptatum, dolorum velit assumenda fuga reprehenderit quam
+            amet facilis sequi aspernatur eligendi.
+          </p>
+          <p>Amy, Graphic Designer</p>
+        </div>
+        <div class="content" id="tab3">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
+            saepe ratione itaque non sunt consectetur, molestias assumenda
+            aspernatur, adipisci illo iure voluptas id aliquid? Nemo officiis
+            neque possimus cum. Quisquam reiciendis tempora eum dicta, libero,
+            delectus in accusantium ad suscipit, vitae quod eius? Possimus
+            similique deleniti nostrum voluptatum sequi et, rem recusandae, sint
+            facilis suscipit eligendi nihil enim praesentium maiores adipisci
+            magnam ab velit, eveniet eaque culpa itaque nisi consectetur?
+            Eligendi sed non id itaque delectus deleniti optio iste repellat.
+          </p>
+          <p>Jung Ho, Developer</p>
+        </div>
+        <div class="content" id="tab4">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
+            labore inventore eaque ipsum sit minima cupiditate laborum sapiente
+            ullam. Atque id natus consequatur porro ducimus quos ullam ipsa, sed
+            aut dolore quis tempora perferendis. Voluptatum aliquam repellendus
+            aut quam voluptatibus sequi consequuntur natus asperiores dolorum ut
+            blanditiis, neque corrupti deserunt dicta expedita sit fugit
+            voluptatem nihil excepturi pariatur voluptate sint cum facere. Sed
+            fugiat optio cumque ex, alias eaque laborum reprehenderit aliquam
+            expedita dolorem incidunt quisquam necessitatibus recusandae atque
+            odit.
+          </p>
+          <p>Chris, Printing Desinger</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+      $(".testimonial-pic img").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+
+        $(".testimonial .content").removeClass("active");
+        // tab1 == $(this).attr('data-alt')
+        $("#" + $(this).attr("data-alt")).addClass("active");
+      });
+    </script>
+  </body>
+</html>
