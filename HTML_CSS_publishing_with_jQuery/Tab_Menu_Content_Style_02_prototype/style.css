@@ -1,6 +1,15 @@
 /* position, background, visibility, overflow, float, ::placeholder, :focus */
 /* addClass, siblings, removeClass, attr, 사용자정의속성 data-alt, let */
 
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  color: #222;
+  background-color: #f4f4f4;
+  font-weight: 300;
+}
+
 section {
   /* border: 1px solid red; */
   width: 800px;
