@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="heading">
+        <h1>
+          <span>코딩웍스</span>, 프론트엔드 퍼블리셔 취업을 위한 실전 퍼블리싱
+          강좌
+        </h1>
+        <input type="text" placeholder="What are you looking for?" />
+      </div>
+      <div class="tab-inner">
+        <ul class="btn">
+          <li data-alt="tab1" class="active">HTML</li>
+          <li data-alt="tab2">CSS</li>
+          <li data-alt="tab3">JQEURY</li>
+          <li data-alt="tab4">JAVASCRIPT</li>
+          <li data-alt="tab5">CSS FRAMEWORK</li>
+        </ul>
+        <div class="tabs">
+          <div id="tab1" class="active">
+            <h2>HTML5</h2>
+            <img src="images/platform-logo-01.png" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              voluptate cumque aspernatur rerum accusantium a repudiandae ut vel
+              natus ratione! Dolorem atque aspernatur, assumenda fuga vel eaque,
+              aperiam dolor sapiente culpa corporis quas nulla odio! Aperiam,
+              non ipsum veritatis consequuntur possimus ad cupiditate impedit
+              repellendus? Beatae, dolorum enim. Magnam ex, vel accusantium
+              fugiat nesciunt delectus, distinctio consequatur tempora beatae
+              enim officia. Dicta fuga possimus quo, aliquid recusandae
+              aspernatur ut harum illo doloribus ipsum laudantium illum, neque
+              in?
+            </p>
+          </div>
+          <div id="tab2">
+            <h2>CSS3</h2>
+            <img src="images/platform-logo-02.png" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              voluptate cumque aspernatur rerum accusantium a repudiandae ut vel
+              natus ratione! Dolorem atque aspernatur, assumenda fuga vel eaque,
+              aperiam dolor sapiente culpa corporis quas nulla odio! Aperiam,
+              non ipsum veritatis consequuntur possimus ad cupiditate impedit
+              repellendus? Beatae, dolorum enim. Magnam ex, vel accusantium
+              fugiat nesciunt delectus, distinctio consequatur tempora beatae
+              enim officia. Dicta fuga possimus quo, aliquid recusandae
+              aspernatur ut harum illo doloribus ipsum laudantium illum, neque
+              in?
+            </p>
+          </div>
+          <div id="tab3">
+            <h2>JQUERY</h2>
+            <img src="images/platform-logo-03.png" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              voluptate cumque aspernatur rerum accusantium a repudiandae ut vel
+              natus ratione! Dolorem atque aspernatur, assumenda fuga vel eaque,
+              aperiam dolor sapiente culpa corporis quas nulla odio! Aperiam,
+              non ipsum veritatis consequuntur possimus ad cupiditate impedit
+              repellendus? Beatae, dolorum enim. Magnam ex, vel accusantium
+              fugiat nesciunt delectus, distinctio consequatur tempora beatae
+              enim officia. Dicta fuga possimus quo, aliquid recusandae
+              aspernatur ut harum illo doloribus ipsum laudantium illum, neque
+              in?
+            </p>
+          </div>
+          <div id="tab4">
+            <h2>JAVASCRIPT</h2>
+            <img src="images/platform-logo-04.png" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              voluptate cumque aspernatur rerum accusantium a repudiandae ut vel
+              natus ratione! Dolorem atque aspernatur, assumenda fuga vel eaque,
+              aperiam dolor sapiente culpa corporis quas nulla odio! Aperiam,
+              non ipsum veritatis consequuntur possimus ad cupiditate impedit
+              repellendus? Beatae, dolorum enim. Magnam ex, vel accusantium
+              fugiat nesciunt delectus, distinctio consequatur tempora beatae
+              enim officia. Dicta fuga possimus quo, aliquid recusandae
+              aspernatur ut harum illo doloribus ipsum laudantium illum, neque
+              in?
+            </p>
+          </div>
+          <div id="tab5">
+            <h2>CSS FRAMEWORKS</h2>
+            <img src="images/platform-logo-05.png" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              voluptate cumque aspernatur rerum accusantium a repudiandae ut vel
+              natus ratione! Dolorem atque aspernatur, assumenda fuga vel eaque,
+              aperiam dolor sapiente culpa corporis quas nulla odio! Aperiam,
+              non ipsum veritatis consequuntur possimus ad cupiditate impedit
+              repellendus? Beatae, dolorum enim. Magnam ex, vel accusantium
+              fugiat nesciunt delectus, distinctio consequatur tempora beatae
+              enim officia. Dicta fuga possimus quo, aliquid recusandae
+              aspernatur ut harum illo doloribus ipsum laudantium illum, neque
+              in?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+      $(".btn li").click(function () {
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+
+        $(".tabs div").removeClass("active");
+        let tab = $(this).attr("data-alt");
+        $("#" + tab).addClass("active");
+      });
+    </script>
+  </body>
+</html>
