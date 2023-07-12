@@ -1,0 +1,51 @@
+/* position, content:attr(), overflow, transition, background */
+/* mouseenter, mouseleave, 사용자 정의 속성 data-image, attr, css, let */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.navi {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 100;
+}
+/* 이번 디자인에서 li의 사용은 줄바꿈 용도다. */
+.navi li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 4em;
+  position: relative;
+}
+.navi li a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: attr(data-text);
+  color: yellowgreen;
+  width: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.navi li a:hover::before {
+  width: 100%;
+}
+
+/* photo */
+.photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(images/portrait-initial.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
