@@ -33,12 +33,125 @@ h6 {
 .detail {
   position: absolute;
   width: 100%; /* position: absolute;의 경우 width가 크기만큼 변하기 때문에 넣어준다. */
-  height: 50%;
-  bottom: -150px;
+  height: 260px;
+  bottom: -170px;
   left: 0;
   background-color: #f8f8f8;
   transition: 0.5s;
+  padding: 10px 20px;
+  box-sizing: border-box;
 }
 .item:hover .detail {
   bottom: 0;
+}
+
+/* title */
+.title {
+  border-bottom: 1px solid #ddd;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.title h2 {
+  float: left;
+  font-size: 16px;
+  color: #888;
+}
+.title h2 em {
+  font-style: normal;
+  display: block;
+  margin-bottom: 5px;
+  color: #000;
+}
+.title span {
+  float: right;
+  color: crimson;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.info {
+  position: relative;
+}
+/* size, color */
+.size {
+  margin-bottom: 10px;
+}
+.size label,
+.color label {
+  display: block;
+  margin-bottom: 5px;
+}
+.size span {
+  font-size: 12px;
+  margin-right: 3px;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  line-height: 15px;
+  padding: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.size span.active {
+  background-color: #000;
+  color: #fff;
+}
+.color span {
+  display: inline-block;
+  /* border: 1px solid #000; */
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  padding: 2px;
+  cursor: pointer;
+}
+.color span.active {
+  border-radius: 50%;
+}
+.color span:nth-of-type(1) {
+  background-color: #808000;
+}
+.color span:nth-of-type(2) {
+  background-color: #ff0000;
+}
+.color span:nth-of-type(3) {
+  background-color: #ffc0cb;
+}
+.color span:nth-of-type(4) {
+  background-color: #00ffff;
+}
+.color span:nth-of-type(5) {
+  background-color: #0000ff;
+}
+
+/* like */
+.like {
+  cursor: pointer;
+}
+.like::before {
+  content: "\f08a";
+  font-family: fontawesome;
+  color: #bbb;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.like.active::before {
+  content: "\f004";
+  color: crimson;
+}
+
+/* button */
+.add-cart {
+  border: 1px solid #ddd;
+  width: 100%;
+  background-color: #fff;
+  cursor: pointer;
+  padding: 7px;
+  margin-top: 10px;
+}
+.add-cart:hover {
+  background-color: #000;
+  color: #fff;
 }
