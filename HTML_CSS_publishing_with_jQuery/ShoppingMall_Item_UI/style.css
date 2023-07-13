@@ -1,0 +1,44 @@
+/* flex, position, box-shadow, float, filter, :hover, ::before, nth-of-type */
+/* addClass, removeClass, toggleClass */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap");
+body {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #eee;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* item */
+.item {
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.item img {
+}
+.detail {
+  position: absolute;
+  width: 100%; /* position: absolute;의 경우 width가 크기만큼 변하기 때문에 넣어준다. */
+  height: 50%;
+  bottom: -150px;
+  left: 0;
+  background-color: #f8f8f8;
+  transition: 0.5s;
+}
+.item:hover .detail {
+  bottom: 0;
+}
