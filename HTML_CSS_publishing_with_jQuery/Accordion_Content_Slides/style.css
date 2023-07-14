@@ -1,0 +1,50 @@
+/* flex, position, float, :hover, ::after, content: url(), transform: rotate */
+/* addClass, removeClass, stop, attr, data-image, slideUp, slideDown */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  color: #222;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+/* Layout */
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+section article {
+  border: 1px solid red;
+  width: 980px;
+  height: 500px;
+}
+.heading {
+  border: 1px solid blue;
+  height: 100px;
+}
+.content {
+}
+.content div {
+  border: 1px solid green;
+  width: 50%;
+  float: left;
+  height: 400px;
+  box-sizing: border-box;
+}
+.accordion {
+}
+.image {
+}
