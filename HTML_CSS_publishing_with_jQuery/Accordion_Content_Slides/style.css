@@ -1,5 +1,6 @@
 /* flex, position, float, :hover, ::after, content: url(), transform: rotate */
 /* addClass, removeClass, stop, attr, data-image, slideUp, slideDown */
+/* - stop : slideUp, slideDown, fadeIn, fadeOut은 일반적으로 stop과 함께 사용한다. */
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
 body {
   font-family: "Noto Sans KR", sans-serif;
@@ -54,16 +55,12 @@ section article {
   right: -30px;
   top: -25px;
 }
-.content {
-}
 .content > div {
   /* border: 1px solid green; */
   width: 50%;
   float: left;
   height: 400px;
   box-sizing: border-box;
-}
-.accordion {
 }
 .title {
   border: 1px solid #ddd;
@@ -72,6 +69,7 @@ section article {
   cursor: pointer;
   padding-left: 15px;
   transition: 0.3s;
+  margin-bottom: 10px;
 }
 .title:hover,
 .title.active {
@@ -95,6 +93,8 @@ section article {
 }
 .desc {
   padding: 15px;
+  display: none;
 }
-.image {
+.desc.active {
+  display: block;
 }
