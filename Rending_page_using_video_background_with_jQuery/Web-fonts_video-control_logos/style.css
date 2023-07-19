@@ -31,3 +31,100 @@ a {
 }
 .logo img {
 }
+
+/* Heading */
+.heading {
+  position: absolute;
+  left: 100px;
+  bottom: 100px;
+  width: 700px;
+  /* name duration delay timing-function */
+  animation: showing1 2s 1s linear;
+  /* 애니메이션은 모두 100%까지 간 뒤에 다시 0%로 돌아가는데, 이를 방지하기 위해 사용 */
+  animation-fill-mode: both;
+}
+.heading h1 {
+  font-size: 60px;
+  margin: 0;
+}
+.heading h1 span {
+  display: block;
+  color: crimson;
+}
+.heading p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+.btn-book,
+.btn-learn {
+  background-color: #fff;
+  color: #222;
+  text-transform: uppercase;
+  width: 150px;
+  display: inline-block;
+  text-align: center;
+  padding: 7px;
+  border-radius: 20px;
+  margin-right: 5px;
+  border: 2px solid #fff;
+  transition: 0.3s;
+}
+.btn-book {
+}
+.btn-book:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+.btn-learn {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.btn-learn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Anniversary */
+.anniversary {
+  position: absolute;
+  right: 100px;
+  bottom: 50px;
+  color: #000;
+  text-align: center;
+  animation: showing2 2s 1s linear;
+  animation-fill-mode: both;
+}
+.anniversary em {
+  display: block;
+  font-style: normal;
+  font-size: 30px;
+  letter-spacing: 5px;
+  margin-bottom: -20px;
+}
+.anniversary span {
+  font-family: "Monoton", sans-serif;
+  font-size: 150px;
+}
+
+@keyframes showing1 {
+  0% {
+    opacity: 0;
+    margin-left: -100px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+@keyframes showing2 {
+  0% {
+    opacity: 0;
+    margin-right: -100px;
+  }
+  100% {
+    opacity: 1;
+    margin-right: 0;
+  }
+}
