@@ -52,5 +52,11 @@
       </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+      $(".trigger").click(function () {
+        $(this).toggleClass("active");
+        $(".modal-gnb").fadeToggle();
+      });
+    </script>
   </body>
 </html>
