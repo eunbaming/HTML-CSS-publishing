@@ -12,7 +12,14 @@ body {
 }
 
 /* Background Video */
-.video-frame {
+.video-frame::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(-135deg, rgba(220, 20, 60, 0.558), transparent);
 }
 .video-frame video {
   position: fixed;
@@ -192,6 +199,7 @@ body {
   color: crimson;
 }
 
+/* Animations */
 @keyframes showing1 {
   0% {
     opacity: 0;
@@ -202,6 +210,7 @@ body {
     margin-left: 0;
   }
 }
+
 @keyframes showing2 {
   0% {
     opacity: 0;
