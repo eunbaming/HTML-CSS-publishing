@@ -35,8 +35,6 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.login-type {
-}
 .login-type h1 {
   margin-top: 0;
   font-size: 38px;
@@ -74,8 +72,26 @@ section {
   background: #00c026 url(images/logo-line.png) no-repeat center left 13px;
 }
 .or-text {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  position: relative;
 }
-.login-footer {
+/* before, after는 inline 요소다. */
+.or-text::before,
+.or-text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  background-color: lightgray;
+  height: 1px;
+  width: 44%;
+}
+.or-text::before {
+  left: 0;
+}
+.or-text::after {
+  right: 0;
 }
 .login-footer label {
   cursor: pointer;
