@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Nextflix FAQ with jQuery */
+.faq {
+  height: 100vh;
+}
+.faq-inner {
+  width: 750px;
+  margin: auto;
+}
+.faq-inner h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+}
+.accordion {
+  font-size: 26px;
+}
+.accordion .title,
+.accordion .content {
+  background-color: #303030;
+  padding: 10px 15px;
+  margin-bottom: 7px;
+}
+.accordion .title {
+  cursor: pointer;
+}
+.accordion .title.active {
+  background-color: #353b48;
+}
+.accordion .title::after {
+  content: "\e9c5";
+  font-family: xeicon;
+  float: right;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+.accordion .title.active::after {
+  transform: rotate(45deg);
+}
+.accordion .content {
+  display: none;
+}
+.newsletter {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  margin-top: 30px;
+}
+.newsletter div {
+  display: flex;
+}
+.newsletter div input[type="email"],
+.newsletter div button {
+  border: none;
+  outline: none;
+  height: 60px;
+  vertical-align: middle;
+  font-size: 20px;
+}
+.newsletter div input[type="email"] {
+  flex: 3;
+  padding-left: 10px;
+}
+.newsletter div button {
+  background-color: #e84118;
+  color: #fff;
+  cursor: pointer;
+  flex: 1;
+}
+.newsletter div button::after {
+  content: "\e93f";
+  font-family: xeicon;
+  font-size: 30px;
+  display: inline-block; /* before, after는 인라인요소여서 transform 속성을 사용할 수 없다. */
+  transform: translateY(3px);
+}
