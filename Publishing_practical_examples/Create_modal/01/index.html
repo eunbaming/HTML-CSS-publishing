@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="btn-notice" href="#">Open Fade-in Modal with jQuery</a>
+    <div class="modal">
+      <div class="modal-content">
+        <a class="btn-close" href="#">X</a>
+        <h2>Welcome to Teams!</h2>
+        <img src="image/group.png" alt="" />
+        <p>
+          Microsoft Teams is a collaboration app built for hybrid work so you
+          and your team stay informed, organized, and connected - all in one
+          place.
+        </p>
+        <a class="btn-guide" href="#">Open Guide</a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+      $(".btn-notice").click(function () {
+        $(".modal").fadeIn();
+      });
+      $(".btn-close").click(function () {
+        $(".modal").fadeOut();
+      });
+    </script>
+  </body>
+</html>
