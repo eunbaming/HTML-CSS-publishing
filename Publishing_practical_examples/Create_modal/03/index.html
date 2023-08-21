@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="btn-notice" href="#" onclick="openModal()"
+      >Open Vanila JavaScript Animation Modal</a
+    >
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <a class="btn-close" href="#" onclick="closeModal()">X</a>
+        <h2>Welcome to Teams!</h2>
+        <img src="image/group.png" alt="group" />
+        <p>
+          Microsoft Teams is a collaboration app built for hybrid work so you
+          and your team stay informed, organized, and connected - all in one
+          place.
+        </p>
+        <a class="btn-guide" href="#">Open Guide</a>
+      </div>
+    </div>
+
+    <script>
+      let modal = document.getElementById("modal");
+      function openModal() {
+        modal.classList.add("active");
+      }
+      function closeModal() {
+        modal.classList.remove("active");
+      }
+    </script>
+  </body>
+</html>
