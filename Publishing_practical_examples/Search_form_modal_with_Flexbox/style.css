@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+* {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+header {
+  height: 80px;
+  background-color: slategray;
+  display: flex;
+  justify-content: center;
+}
+nav {
+  width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo img {
+  height: 40px;
+}
+.search-box {
+  color: #fff;
+  font-size: 2em;
+}
+.open-search {
+  cursor: pointer;
+}
+section {
+  background-color: #fff;
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+}
+
+/* Search form modal */
+.modal-search {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -300px; /* display 속성을 주면 위의 속성이 덮어씌어지기 때문에 사용 X */
+  transition: 0.3s;
+}
+.modal-search.active {
+  top: 0;
+}
+.close-search {
+  position: absolute; /* position 속성으로 독립적이므로 flex속성을 받지 않음 */
+  top: 10px;
+  right: 10px;
+  font-size: 2em;
+  color: #777;
+  cursor: pointer;
+}
+.search {
+  width: 500px;
+}
+.field {
+  display: flex;
+  position: relative;
+}
+.field::before {
+  content: "\e97a";
+  font-family: xeicon;
+  position: absolute;
+  color: #000;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+}
+.field input[type="search"],
+.field input[type="button"] {
+  padding: 15px;
+  border: none;
+  outline: none;
+}
+.field input[type="search"] {
+  flex: 4;
+  padding-left: 50px;
+}
+.field input[type="search"]::placeholder {
+  font-style: italic;
+}
+.field input[type="search"]:focus::placeholder {
+  opacity: 0;
+}
+.field input[type="button"] {
+  flex: 1;
+  background-color: crimson;
+  color: #fff;
+  opacity: 0.9;
+  cursor: pointer;
+}
+.field input[type="button"]:hover {
+  opacity: 1;
+}
+.hash-tag {
+  font-size: 15px;
+  color: gold;
+  margin: 10px;
+  display: none;
+}
